@@ -1,0 +1,33 @@
+{
+  "name": "cordova-plugin-braintree-sdk",
+  "version": "1.0.0-alpha",
+  "description": "Cordova Plugin for latest Braintree Integration",
+  "cordova": {
+    "id": "cordova-plugin-braintree-sdk",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HansKrywaa/cordova-plugin-braintree-sdk.git"
+  },
+  "issue": "https://github.com/HansKrywaa/cordova-plugin-braintree-sdk/issues",
+  "scripts": {
+    "doctoc": "doctoc README.md --github --title '**Table of Content**' --maxlevel 3"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova",
+    "capacitor",
+    "braintree",
+    "paypal",
+    "card",
+    "payment"
+  ],
+  "main": "./src/typings/index.js",
+  "types": "./src/typings/index.d.ts",
+  "author": "HansKrywaa",
+  "license": "MIT"
+}

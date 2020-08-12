@@ -1,0 +1,15 @@
+repositories {
+    maven {
+        url  "https://cardinalcommerce.bintray.com/android"
+        credentials {
+            username 'braintree-team-sdk@cardinalcommerce'
+            password '220cc9476025679c4e5c843666c27d97cfb0f951'
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.braintreepayments.api:braintree:3.13.0'
+    implementation 'com.braintreepayments.api:data-collector:3.13.0'
+    implementation 'com.braintreepayments.api:drop-in:4.6.0'
+}

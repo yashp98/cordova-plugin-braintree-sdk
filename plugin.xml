@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-braintree-sdk" version="1.0.0-alpha" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>BraintreeSdk</name>
+    <description>Cordova Plugin for latest Braintree Integration</description>
+
+    <repo>https://github.com/HansKrywaa/cordova-plugin-braintree-sdk.git</repo>
+    <issue>https://github.com/HansKrywaa/cordova-plugin-braintree-sdk/issues</issue>
+
+    <license>MIT</license>
+
+    <js-module name="BraintreeSdk" src="www/Braintree.js">
+        <clobbers target="window.Braintree"/>
+    </js-module>
+
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="BraintreeSdk">
+                <param name="android-package" value="de.hanskrywaa.Braintree.BraintreeSdk"/>
+            </feature>
+        </config-file>
+
+        <framework src="src/android/build.gradle" custom="true" type="gradleReference"/>
+
+        <config-file target="AndroidManifest.xml" parent="application">
+            <activity android:name="com.braintreepayments.api.BraintreeBrowserSwitchActivity"
+                      android:launchMode="singleTask">
+                <intent-filter>
+                    <action android:name="android.intent.action.VIEW"/>
+                    <category android:name="android.intent.category.DEFAULT"/>
+                    <category android:name="android.intent.category.BROWSABLE"/>
+                    <data android:scheme="${applicationId}.braintree"/>
+                </intent-filter>
+            </activity>
+        </config-file>
+
+        <source-file src="src/android/BraintreeSdk.java" target-dir="src/de/hanskrywaa.Braintree"/>
+        <source-file src="src/android/BraintreeErrorCodes.java" target-dir="src/de/hanskrywaa.Braintree"/>
+
+        <preference name="ANDROID_CARD_IO_VERSION" default="5.+" />
+
+        <framework src="io.card:android-sdk:$ANDROID_CARD_IO_VERSION"/>
+    </platform>
+
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="BraintreeSdk">
+                <param name="ios-package" value="BraintreeSdk"/>
+            </feature>
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
+            <array>
+                <string>com.paypal.ppclient.touch.v1</string>
+                <string>com.paypal.ppclient.touch.v2</string>
+                <string>com.venmo.touch.v2</string>
+            </array>
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+            <array>
+                <dict>
+                    <key>CFBundleTypeRole</key>
+                    <string>Editor</string>
+                    <key>CFBundleURLSchemes</key>
+                    <array>
+                        <string>${PRODUCT_BUNDLE_IDENTIFIER}.payments</string>
+                    </array>
+                </dict>
+            </array>
+        </config-file>
+
+        <header-file src="src/ios/BraintreeSdk.h" />
+        <source-file src="src/ios/BraintreeSdk.m"  />
+        <header-file src="src/ios/AppDelegate+BraintreeSdk.h" />
+        <source-file src="src/ios/AppDelegate+BraintreeSdk.m"  />
+
+        <podspec>
+            <config>
+                <source url="https://cdn.cocoapods.org/"/>
+            </config>
+            <pods use-frameworks="true">
+                <pod name="BraintreeDropIn" spec="8.1.1"/>
+                <pod name="Braintree" spec="4.35.0"/>
+                <pod name="Braintree/DataCollector" spec="4.35.0"/>
+                <pod name="Braintree/Apple-Pay" spec="4.35.0"/>
+                <pod name="Braintree/Venmo" spec="4.35.0"/>
+                <pod name="Braintree/3D-Secure" spec="4.35.0"/>
+            </pods>
+        </podspec>
+    </platform>
+</plugin>
