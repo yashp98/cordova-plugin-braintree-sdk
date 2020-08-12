@@ -19,6 +19,7 @@ Please consider donating if you're using this plugin in an app that makes you mo
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Content**
 
+- [Note](#note)
 - [Install](#install)
   - [Android](#android)
   - [iOS](#ios)
@@ -47,7 +48,8 @@ Please consider donating if you're using this plugin in an app that makes you mo
 # Note
 
 This Plugin in still in development and not ready for production yet.
-If you want to help me develop this Plugin, please read this carefully. If you found any issues, you can report them [here](https://github.com/HansKrywaa/cordova-plugin-braintree-sdk/issues).
+If you want to help me develop this Plugin, please read this carefully.
+If you found any issues, you can report them [here](https://github.com/HansKrywaa/cordova-plugin-braintree-sdk/issues).
 
 # Install
 
@@ -70,7 +72,7 @@ Also `AndroidXEnabled` must be set to **true** via:
 ## iOS
 
 I developed/tested this Plugin with a [cordova-ios](https://github.com/apache/cordova-ios) version `6.1.0`.
-If you are using another Version and think this cause Errors please [open an Issue](todo) and we will out together what the problem is and how you can solve it.
+If you are using another Version and think this cause Errors please [open an Issue](https://github.com/HansKrywaa/cordova-plugin-braintree-sdk/issues) and we will out together what the problem is and how you can solve it.
 
 # Environment Variables
 
