@@ -13,7 +13,9 @@
     "type": "git",
     "url": "https://github.com/HansKrywaa/cordova-plugin-braintree-sdk.git"
   },
-  "issue": "https://github.com/HansKrywaa/cordova-plugin-braintree-sdk/issues",
+  "bugs": {
+    "url": "https://github.com/HansKrywaa/cordova-plugin-braintree-sdk/issues"
+  },
   "scripts": {
     "doctoc": "doctoc README.md --github --title '**Table of Content**' --maxlevel 3"
   },
@@ -29,5 +31,6 @@
   "main": "./src/typings/index.js",
   "types": "./src/typings/index.d.ts",
   "author": "HansKrywaa",
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://github.com/HansKrywaa/cordova-plugin-braintree-sdk"
 }

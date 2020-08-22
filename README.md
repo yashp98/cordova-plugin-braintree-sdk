@@ -1,11 +1,12 @@
 # Braintree Cordova Plugin
+![Maintenance](https://img.shields.io/maintenance/yes/2020)
 
 This [Cordova](https://cordova.apache.org) Plugin is a Wrapper for [Braintree](https://www.braintreepayments.com/).
 
 It currently uses Version `4.35.0` (iOS) and `3.13.0` (Android) of the Braintree Mobile SDK. The Braintree process
 is not very easy, so before start using this Plugin you should read (and understand) their [Documentation](https://developers.braintreepayments.com/start/overview). 
 
-**This Plugin is still in development & should not be used in production yet!**
+**This Plugin is still in development & should only used in production after testing!**
 
 <!-- DONATE -->
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG_global.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LMX5TSQVMNMU6&source=url)

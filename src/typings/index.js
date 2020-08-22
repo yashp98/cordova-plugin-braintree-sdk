@@ -1,5 +1,5 @@
 var plugin = function () {
-  return window.Braintree;
+  return window.Braintree || {};
 };
 var Braintree = /** @class */ (function () {
   function Braintree() {

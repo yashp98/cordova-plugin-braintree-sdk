@@ -3,7 +3,7 @@
     <name>BraintreeSdk</name>
     <description>Cordova Plugin for latest Braintree Integration</description>
 
-    <repo>https://github.com/HansKrywaa/cordova-plugin-braintree-sdk.git</repo>
+    <repo>https://github.com/HansKrywaa/cordova-plugin-braintree-sdk</repo>
     <issue>https://github.com/HansKrywaa/cordova-plugin-braintree-sdk/issues</issue>
 
     <license>MIT</license>
@@ -33,8 +33,8 @@
             </activity>
         </config-file>
 
-        <source-file src="src/android/BraintreeSdk.java" target-dir="src/de/hanskrywaa.Braintree"/>
-        <source-file src="src/android/BraintreeErrorCodes.java" target-dir="src/de/hanskrywaa.Braintree"/>
+        <source-file src="src/android/BraintreeSdk.java" target-dir="src/de/hanskrywaa/Braintree"/>
+        <source-file src="src/android/BraintreeErrorCodes.java" target-dir="src/de/hanskrywaa/Braintree"/>
 
         <preference name="ANDROID_CARD_IO_VERSION" default="5.+" />
 
