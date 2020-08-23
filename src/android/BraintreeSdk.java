@@ -20,7 +20,6 @@ import com.braintreepayments.api.models.PayPalAccountNonce;
 import com.braintreepayments.api.models.PayPalRequest;
 import com.braintreepayments.api.models.PaymentMethodNonce;
 import com.braintreepayments.api.models.PostalAddress;
-import com.braintreepayments.api.models.ThreeDSecureInfo;
 import com.braintreepayments.api.models.VenmoAccountNonce;
 import com.braintreepayments.cardform.view.CardForm;
 
@@ -150,17 +149,6 @@ public class BraintreeSdk extends CordovaPlugin implements BraintreeErrorListene
             innerMap.put("type", cardNonce.getTypeLabel());
 
             resultMap.put("card", innerMap);
-
-            // 3D Secure
-            ThreeDSecureInfo threeDSecureInfo = cardNonce.getThreeDSecureInfo();
-
-            if (threeDSecureInfo != null) {
-                Map<String, Object> innerMap2 = new HashMap<>();
-                innerMap2.put("liabilityShifted", threeDSecureInfo.isLiabilityShifted());
-                innerMap2.put("liabilityShiftPossible", threeDSecureInfo.isLiabilityShiftPossible());
-
-                resultMap.put("threeDSecureCard", innerMap2);
-            }
         }
 
         // PayPal
