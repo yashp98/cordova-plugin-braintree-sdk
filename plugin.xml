@@ -84,7 +84,6 @@
                 <pod name="Braintree/DataCollector" spec="4.35.0"/>
                 <pod name="Braintree/Apple-Pay" spec="4.35.0"/>
                 <pod name="Braintree/Venmo" spec="4.35.0"/>
-                <pod name="Braintree/3D-Secure" spec="4.35.0"/>
             </pods>
         </podspec>
     </platform>

@@ -38,7 +38,6 @@ Please consider donating if you're using this plugin in an app that makes you mo
 - [Data Models](#data-models)
   - [PaymentUINonceResult](#paymentuinonceresult)
   - [CardNonce](#cardnonce)
-  - [ThreeDSecureInfo](#threedsecureinfo)
   - [PayPalAccountNonce](#paypalaccountnonce)
   - [VenmoAccount](#venmoaccount)
   - [Postal Address](#postal-address)
@@ -233,7 +232,6 @@ This Methode returns an [PaymentUiNonceResult](#paymentuinonceresult)
 - localizedDescription (string)
 - deviceData (string) - Only available if collecting device data is enabled
 - card ([CardNonce](#cardnonce)) - Only available if payment was via card
-- threeDSecureCard ([ThreeDSecureInfo](#threedsecureinfo)) - Only available if payment was via card and threeD info is available
 - paypalAccount ([PayPalAccountNonce](#paypalaccountnonce)) - Only available if payment via PayPal
 - venmoAccount ([VenmoAccount](#venmoaccount)) - Only available if payment via Venmo
 
@@ -243,11 +241,6 @@ This Methode returns an [PaymentUiNonceResult](#paymentuinonceresult)
 - lastFour (string)
 - network (string)
 - type (string)
-
-## ThreeDSecureInfo
-
-- liabilityShifted (boolean)
-- liabilityShiftPossible (boolean)
 
 ## PayPalAccountNonce
 

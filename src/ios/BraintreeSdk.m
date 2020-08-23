@@ -290,7 +290,6 @@ static NSString * const TAG = @"[BraintreeSdk] ";
     BTCardNonce *cardNonce;
     BTPayPalAccountNonce *payPalAccountNonce;
     BTApplePayCardNonce *applePayCardNonce;
-    BTThreeDSecureCardNonce *threeDSecureCardNonce;
     BTVenmoAccountNonce *venmoAccountNonce;
 
     if ([paymentMethodNonce isKindOfClass:[BTCardNonce class]]) {
@@ -303,10 +302,6 @@ static NSString * const TAG = @"[BraintreeSdk] ";
 
     if ([paymentMethodNonce isKindOfClass:[BTApplePayCardNonce class]]) {
         applePayCardNonce = (BTApplePayCardNonce*)paymentMethodNonce;
-    }
-
-    if ([paymentMethodNonce isKindOfClass:[BTThreeDSecureCardNonce class]]) {
-        threeDSecureCardNonce = (BTThreeDSecureCardNonce*)paymentMethodNonce;
     }
 
     if ([paymentMethodNonce isKindOfClass:[BTVenmoAccountNonce class]]) {
@@ -341,12 +336,6 @@ static NSString * const TAG = @"[BraintreeSdk] ";
 
         // BTApplePayCardNonce
         @"applePayCard": !applePayCardNonce ? [NSNull null] : @{
-        },
-
-        // BTThreeDSecureCardNonce Fields
-        @"threeDSecureCard": !threeDSecureCardNonce ? [NSNull null] : @{
-                @"liabilityShifted": threeDSecureCardNonce.liabilityShifted ? @YES : @NO,
-                @"liabilityShiftPossible": threeDSecureCardNonce.liabilityShiftPossible ? @YES : @NO
         },
 
         // BTVenmoAccountNonce Fields
