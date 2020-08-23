@@ -22,6 +22,7 @@ Please consider donating if you're using this plugin in an app that makes you mo
 
 - [Note](#note)
 - [Install](#install)
+  - [General Requirements](#general-requirements)
   - [Android](#android)
   - [iOS](#ios)
 - [Environment Variables](#environment-variables)
@@ -52,6 +53,10 @@ If you want to help me develop this Plugin, please read this carefully.
 If you found any issues, you can report them [here](https://github.com/HansKrywaa/cordova-plugin-braintree-sdk/issues).
 
 # Install
+
+## General Requirements
+
+- Cordova-lib: `>= 9`
 
 ## Android
 Because this Plugin uses the latest Braintree SDK, which is based on [AndroidX](https://developer.android.com/jetpack/androidx) and **AppCompatActivity**,
