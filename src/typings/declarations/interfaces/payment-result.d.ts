@@ -7,11 +7,6 @@ declare module 'cordova-plugin-braintree-sdk' {
     type: string;
   }
 
-  interface ThreeDSecureResult {
-    liabilityShifted: boolean;
-    liabilityShiftPossible: boolean;
-  }
-
   /**
    * Information about the PayPal User
    */
@@ -67,7 +62,6 @@ declare module 'cordova-plugin-braintree-sdk' {
      * only available if payment was made via card
      */
     card?: CardResult;
-    threeDSecureCard?: ThreeDSecureResult;
 
     /**
      * ony available if payment via paypal
