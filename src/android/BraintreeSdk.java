@@ -1,4 +1,4 @@
-package de.hanskrywaa.Braintree;
+package de.einfachhans.Braintree;
 
 import android.content.Intent;
 import android.util.Log;

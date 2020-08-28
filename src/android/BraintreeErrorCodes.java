@@ -1,4 +1,4 @@
-package de.hanskrywaa.Braintree;
+package de.einfachhans.Braintree;
 
 public enum BraintreeErrorCodes {
     TokenRequired(1),
